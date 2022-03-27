@@ -1,0 +1,139 @@
+@import url("./fonts.css");
+
+:root {
+    --pc: #333333;
+    --sc: #060050;
+    --sc2: #8E3ACC;
+    --wc: #ffffff;
+    --gc: #cccccc;
+    --gb: linear-gradient(102.92deg, #1B1285 -36.3%, #643088 100%);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #efefef;
+    font-family: 'Gothic', 'Molarabic';
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--pc);
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
+
+p {
+    line-height: 24px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--pc);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+}
+
+.custom-btn {
+    font-weight: 600;
+    font-size: 24px;
+    border-radius: 5px;
+    background: linear-gradient(102.92deg, #1B1285 -36.3%, #643088 100%);
+    display: inline-block;
+    color: var(--wc);
+    padding: 12px 30px;
+}
+
+.custom-btn:hover {
+    color: var(--wc);
+}
+
+.default-btn a {
+    background: linear-gradient(to right, #6f37a0, #71399b, #723c97, #733e92, #74418e);
+    border: 2px solid #FFFFFF;
+    padding: 15px 12px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+}
+.custom-btn.white-custom{
+    background: var(--wc);
+    border: 1px solid var(--sc);
+    color: var(--sc);
+}
+.section-title h2 {
+    font-size: 50px;
+    line-height: 52px;
+    font-weight: 600px;
+    color: var(--sc);
+    text-transform: capitalize;
+}
+
+.section-title h6 {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--pc) !important;
+}
+
+.section-title span {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--pc);
+}
+
+.about-title h4 {
+    font-size: 45px;
+    color: var(--sc);
+    line-height: 36px;
+    font-weight: 600;
+}
+
+.about-title span {
+    font-size: 24px;
+    color: var(--sc);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.scrolled {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    transition: .4s;
+    box-shadow: 3px 3px 10px 0px #33333396;
+}

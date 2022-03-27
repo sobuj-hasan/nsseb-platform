@@ -1,0 +1,309 @@
+/* Arabic Css Here */
+@import url("./fonts.css");
+
+body {
+    font-size: 14px;
+    font-family: 'Gothic', 'Molarabic';
+    font-weight: 600;
+    line-height: 21px;
+    background: #FFFFFF;
+    font-style: none;
+}
+
+/* index page arabic css */
+.banner-content .order-btn .number-count {
+    right: 36px;
+}
+.banner-content .wishlist-btn .number-count {
+    right: 36px;
+}
+
+.banner-overlay .banner-div .banner-text .banner-top-text {
+    text-align: right;
+}
+.banner-overlay .banner-div .banner-text .banner-bottom-text {
+    text-align: right;
+}
+.video-section .video-article p {
+    text-align: right;
+    margin-right: 65px;
+}
+.video-section .video-article h3 {
+    text-align: right;
+    margin-right: 65px;
+}
+.video-section .video-article h5 {
+    text-align: right;
+    margin-right: 65px;
+}
+.apps-download .apps-down-article h3 {
+    text-align: right;
+}
+.apps-download .apps-down-article h5 {
+    text-align: right;
+}
+.apps-download .apps-down-article p {
+    text-align: right;
+}
+.recommendation .read-box h4 {
+    text-align: right;
+}
+.recommendation .read-box .mini-title {
+    text-align: right;
+}
+.recommendation .read-box p {
+    text-align: right;
+}
+.wedding-hall .hall-auditorium .auditorium-text h3 {
+    margin-right: 39px;
+}
+.wedding-hall .hall-auditorium .auditorium-text p {
+    margin-right: 39px;
+}
+.wedding-hall .hall-auditorium2 .auditorium-text2 h3 {
+    margin-right: 44px;
+}
+.wedding-hall .hall-auditorium2 .auditorium-text2 p {
+    margin-right: 39px;
+}
+.wedding-hall .hall-auditorium3 .auditorium-text3 h3 {
+    margin-right: 44px;
+}
+.wedding-hall .hall-auditorium3 .auditorium-text3 p {
+    margin-right: 39px;
+}
+.wedding-hall .hall-auditorium2 {
+    margin-right: -91px;
+}
+.wedding-hall .hall-auditorium3 {
+    margin-right: -91px;
+}
+.footer-text .footer-title::after {
+    right: 15px;
+}
+
+.footer-bottom-text .footer-bottom-title {
+    text-align: right;
+}
+.footer-bottom-text .email {
+    text-align: right;
+    margin-right: 50px;
+}
+.footer-bottom-text .btm-icon {
+    float: right;
+}
+
+.register-part .card .input-field .icon {
+    margin-left: 37px;
+    float: right;
+}
+
+.register-part .log-img {
+    right: 578px;
+}
+.register-part .register-img {
+    right: 565px;
+}
+.register-part .card .form-input .form-title {
+    margin-right: 37px !important;
+}
+
+.register-part .card .input-field .icon {
+    margin-right: 37px;
+    float: right;
+}
+.register-part .card .input-field .custom-input {
+    margin-right: -20px;
+}
+
+.register-part .card .input-field .input-line {
+    margin-right: 37px;
+}
+
+.card .submit-part .submit-login-button {
+    margin-right: 37px;
+}
+.card .submit-part .submit-button {
+    margin-right: 37px;
+}
+
+.subscribe .subscribe-box .email-box {
+    margin-right: 86px;
+}
+.subscribe .subscribe-box .email-box .left-content .subs-input {
+    margin-right: 80px;
+    padding-right: 10px;
+}
+.subscribe .subscribe-box .email-box .left-content h6 {
+    text-align: right;
+    margin-right: 80px;
+}
+
+/* ======================== */
+.category .category-part .single-category .right-icon {
+    display: none;
+}
+.category .category-part .single-category ul li a {
+    margin-right: 47px;
+}
+.top-profile .profile h3::after {
+    opacity: 0;
+}
+.subscribe .subscribe-box h2 {
+    text-align: right;
+    padding-right: 86px;
+}
+.subscribe .subscribe-box p {
+    padding-right: 86px;
+}
+
+/* =============================== */
+.profile .profile-view-details .about h4 {
+    margin-right: 24px;
+}
+.profile .profile-details .profile-details-text .work-part h3 {
+    margin-right: 61px;
+}
+.profile .profile-details .profile-details-text .social-activity h3 {
+    margin-right: 61px;
+}
+.profile .profile-details .profile-details-text .work-part h4 {
+    margin-right: 61px;
+}
+.profile .profile-details .profile-details-text .social-activity .social-link .link-text {
+    margin-right: 25px;
+}
+.profile .profile-view-details .personal-details h4 {
+    margin-right: 24px;
+}
+.profile .profile-view-details .personal-details .address-left-site h5 {
+    margin-right: 15px;
+}
+.profile .profile-view-details .personal-details .personal-address h5 {
+    margin-right: 26px;
+}
+.profile .profile-view-details .personal-details h4::after {
+    opacity: 0;
+}
+.banner-content .search-bar .search-input {
+    padding-right: 90px;
+}
+.blog-details .blog-details-wrapper .blog-details-right-part .top-category ul li a {
+    margin-right: 15px;
+}
+.blog-details .blog-details-wrapper .blog-details-right-part .top-category .list-pointer {
+    color: #FFFFFF;
+}
+.blog .left-content .blog-article h4 {
+    text-align: right;
+}
+.blog .left-content .blog-article .social-icon::after {
+    right: 0px;
+}
+.blog .left-content .blog-article p {
+    text-align: right;
+}
+.blog .right-content .more-blog-article {
+    text-align: right;
+}
+.blog-details .blog-details-wrapper .blog-details-right-part h4 {
+    text-align: right;
+}
+
+.blog-details .blog-details-wrapper .blog-details-right-part .recent-blog-wrapper .post-tag h3 {
+    text-align: right;
+}
+.blog-details .blog-details-wrapper .blog-details-right-part .recent-blog-wrapper .recent-blog h4 {
+    text-align: right;
+}
+.blog-details .blog-details-wrapper .blog-details-right-part .recent-blog-wrapper .share-post h3 {
+    text-align: right;
+}
+.blog-details .blog-details-wrapper .blog-details-right-part .recent-blog-wrapper .recent-blog h3 {
+    text-align: right;
+}
+.blog-details .blog-details-wrapper .blog-details-right-part .recent-blog-wrapper .recent-blog .name {
+    text-align: right;
+}
+.breadcump .search-bar {
+    text-align: left;
+}
+.landing-search .banner-search .banner-search-middle h3 {
+    margin-left: 2px;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 992px) and (max-width: 1280px){
+    .wedding-hall .hall-auditorium2 {
+        margin-right: 0px;
+    }
+    .wedding-hall .hall-auditorium3 {
+        margin-right: 0px;
+    }
+    .banner-overlay .banner-div .banner-search .mid-text {
+        text-align: right;
+    }
+    .banner-overlay .banner-div .banner-search .input-group .custom-input {
+        margin-left: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .wedding-hall .hall-auditorium2 {
+        margin-right: 0px;
+    }
+    .wedding-hall .hall-auditorium3 {
+        margin-right: 0px;
+    }
+    .banner-overlay .banner-div .banner-search .mid-text {
+        text-align: right;
+    }
+    .banner-overlay .banner-div .banner-search .input-group .custom-input {
+        margin-left: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .love-story .share-love-story .man-img .man {
+        top: 140px;
+        left: 270px;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+    .wedding-hall .hall-auditorium2 {
+        margin-right: 0px;
+    }
+    .wedding-hall .hall-auditorium3 {
+        margin-right: 0px;
+    }
+    .footer-bottom-text .command-text {
+        text-align: center;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
