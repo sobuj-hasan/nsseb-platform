@@ -82,6 +82,8 @@ return [
     "land_number" => "996 00 11 000 111 00",
     "language" => "Language",
     "copyright" => "Copyright-2022 | All rights reserved to Nassib Incubator Company Ltd.",
+    "Marriage_offer_for_male" => "Marriage offer for male",
+    "Marriage_offer_for_female" => "Marriage offer for female",
     // =============================
     // Our Services page content 
     // =============================

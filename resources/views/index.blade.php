@@ -30,8 +30,8 @@
                 </div>
                 <div class="container">
                     <div class="banner-div">
-                        <div class="banner-text mt-2">
-                            <h1><strong class="bold-text">@lang('home.we_help_to')</strong></h1>
+                        <div class="banner-text">
+                            {{-- <h1><strong class="bold-text">@lang('home.we_help_to')</strong></h1> --}}
                             {{-- <h5 class="banner-top-text">@lang('home.nsseb_platform')</h5> --}}
                             <h5 class="banner-bottom-text">@lang('home.find_life_partner')</h5>
                         </div>
@@ -85,11 +85,40 @@
     </header>
     <!-- Header part End -->
 
+    <!-- Marriage Offers part Here -->
+    <div id="wedding" class="wedding main-wrapper pb-lg-3">
+        <div class="container">
+            <div class="wedding-header">
+                <h3 class="text-left">@lang('home.marriage_offer')</h3>
+            </div>
+            <div class="row pt-4 wedding-shop-slider">
+                @foreach ($marriage_profile as $profile)
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 slider-item">
+                        <div class="product-box">
+                            <div class="img-box" style="border-radius: 5px;">
+                                <a href="{{ route('profile', $profile->id) }}">
+                                    <img style="border-radius: 5px;" class="product-img" src="{{ asset('nsseb_assets/media/images/profile_img') }}/{{ $profile->profile_photo }}" alt="">
+                                </a>
+                            </div>
+                            <h5 style="font-size: 14px; line-height: 12px; margin-top: 10px;">{{ $profile->living_place ?? "Location" }}</h5>
+                            <a href="{{ route('profile', $profile->id) }}">
+                                <h6>{{ $profile->name }}</h6>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+                @empty($profile)
+                    <div class="text-danger">Nothig to show marriage profile...</div>
+                @endempty
+            </div>
+        </div>
+    </div>
+
     <!-- Wedding shop part Here -->
     <div id="wedding" class="wedding main-wrapper">
         <div class="container">
             <div class="wedding-header">
-                <h3>@lang('home.your_wedding_shop')</h3>
+                <h3 class="text-left">@lang('home.your_wedding_shop')</h3>
             </div>
             <div class="row pt-4 wedding-shop-slider">
                 @foreach ($wedding_products as $product)
@@ -102,36 +131,8 @@
         </div>
     </div>
 
-    <!-- Video Section part start -->
-    {{-- <div id="video-section" class="video-section main-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="video-player">
-                        <div class="play-icon">
-                            <a class="venobox" data-autoplay="true" data-vbtype="video"
-                                href="https://youtu.be/ollH45NDXu0">
-                                <img class="icon" src="{{ asset('nsseb_assets/media/icon/video-player.svg') }}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="video-article">
-                        <h3>@lang('home.how_to_find')</h3>
-                        <h5>@lang('home.life_partner')</h5>
-                        <p>@lang('home.how_to_find_article1')</p>
-                        <p>@lang('home.how_to_find_article2')</p>
-                        <p>@lang('home.how_to_find_article3')</p>
-                        <p>@lang('home.how_to_find_article4')</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
     <!-- Wedding Hall part Here -->
-    <div id="wedding" class="wedding main-wrapper pt-lg-5">
+    <div id="wedding" class="wedding main-wrapper pt-lg-3">
         <div class="container">
             <div class="wedding-header">
                 <h3 class="text-left">@lang('home.wedding_hall')</h3>
@@ -211,7 +212,7 @@
     </div>
 
     <!-- Wedding Couch part Here -->
-    <div id="wedding" class="wedding main-wrapper pt-lg-5">
+    <div id="wedding" class="wedding main-wrapper pt-lg-3">
         <div class="container">
             <div class="wedding-header">
                 <h3 class="text-left">@lang('home.wedding_couch')</h3>
@@ -226,14 +227,42 @@
         </div>
     </div>
 
-    <!-- Marriage Offers part Here -->
-    <div id="wedding" class="wedding main-wrapper pt-lg-5 pb-lg-5">
-        <div class="container pb-3">
+    <!-- Marriage Offers for male part Here -->
+    <div id="wedding" class="wedding main-wrapper pb-lg-3">
+        <div class="container">
             <div class="wedding-header">
-                <h3 class="text-left">@lang('home.marriage_offer')</h3>
+                <h3 class="text-left">@lang('home.Marriage_offer_for_male')</h3>
             </div>
             <div class="row pt-4 wedding-shop-slider">
-                @foreach ($marriage_profile as $profile)
+                @forelse ($marriage_profile_men as $profile)
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 slider-item">
+                        <div class="product-box">
+                            <div class="img-box" style="border-radius: 5px;">
+                                <a href="{{ route('profile', $profile->id) }}">
+                                    <img style="border-radius: 5px;" class="product-img" src="{{ asset('nsseb_assets/media/images/profile_img') }}/{{ $profile->profile_photo }}" alt="">
+                                </a>
+                            </div>
+                            <h5 style="font-size: 14px; line-height: 12px; margin-top: 10px;">{{ $profile->living_place ?? "Location" }}</h5>
+                            <a href="{{ route('profile', $profile->id) }}">
+                                <h6>{{ $profile->name }}</h6>
+                            </a>
+                        </div>
+                    </div>
+                    @empty
+                    <div class="text-danger">Nothig to show marriage profile for Male ...</div>
+                @endforelse
+            </div>
+        </div>
+    </div>
+
+    <!-- Marriage Offers for Female part Here -->
+    <div id="wedding" class="wedding main-wrapper pb-lg-3">
+        <div class="container">
+            <div class="wedding-header">
+                <h3 class="text-left">@lang('home.Marriage_offer_for_female')</h3>
+            </div>
+            <div class="row pt-4 wedding-shop-slider">
+                @foreach ($marriage_profile_female as $profile)
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 slider-item">
                         <div class="product-box">
                             <div class="img-box" style="border-radius: 5px;">
@@ -256,7 +285,7 @@
     </div>
 
     <!-- App download part -->
-    <div id="apps-download" class="apps-download main-wrapper pb-5">
+    <div id="apps-download" class="apps-download main-wrapper pt-5 pb-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -278,46 +307,6 @@
             </div>
         </div>
     </div>
-    
-    <!-- Reconmendation part  -->
-    {{-- <div id="recommendation" class="recommendation main-wrapper">
-        <div class="container pt-5">
-            <div class="row">
-                @foreach ($recommend_blog as $blog)
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <div class="read-box">
-                            <h4>{{ Str::limit($blog->title, 20, $end='..') }}</h4>
-                            <p class="mini-title">Take care your partner</p>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-                            <div class="read-btn">
-                                <a class="read" href="{{ route('blogdetails', $blog->slug) }}">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-                @empty($blog)
-                    <h5 class="text-danger">Nothing to show any Recommendations..</h5>
-                @endempty
-            </div>
-        </div>
-    </div> --}}
-
-    <!-- Our Blog part -->
-    {{-- <div id="blog" class="blog">
-        <div class="container">
-            <h3>Our Blog</h3>
-            <div class="blog-text">
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit
-                mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-            </div>
-            
-            @include('nsseb_components.blogpart')
-
-        </div>
-    </div> --}}
-
-    <!-- Testimonial part  -->
-    {{-- @include('nsseb_components.testimonial') --}}
 
 @endsection
 

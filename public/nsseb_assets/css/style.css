@@ -1041,20 +1041,20 @@ Login page CSS
 }
 
 .banner-overlay .banner-div .banner-text .banner-bottom-text {
-    font-size: 28px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 600;
-    line-height: 40px;
+    line-height: 34px;
     letter-spacing: 0em;
     text-align: left;
     color: #ffffff;
 }
 
-.banner-overlay .banner-search{
+.banner-overlay .banner-search {
     width: 490px;
     height: auto;
-    margin-top: 20px;
-    margin-bottom: 90px;
+    margin-top: 5px;
+    margin-bottom: 40px;
 }
 
 .banner-overlay .banner-div .banner-search .mid-text{
@@ -1846,17 +1846,16 @@ Login page CSS
     background: #FFFFFF;
 }
 
-.wedding .wedding-header h3{
-    
-    font-size: 50px;
+.wedding .wedding-header h3 {
+    font-size: 40px;
     font-style: normal;
     font-weight: 600;
-    line-height: 67px;
+    line-height: 40px;
     letter-spacing: 0em;
     text-align: center;
     color: #74408f;
-    padding-top: 38px;
-    margin-bottom: 23px;
+    padding-top: 25px;
+    margin-bottom: 10px;
 }
 
 .wedding .wedding-header .text-area{

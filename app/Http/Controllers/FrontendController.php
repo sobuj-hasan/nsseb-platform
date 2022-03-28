@@ -27,8 +27,10 @@ class FrontendController extends Controller
         $couch_category = Category::where('name', 'wedding couch')->first()->id;
         $wedding_products = Product::where('category_id', '!=', $couch_category)->inRandomOrder()->limit(80)->get();
         $marriage_profile = User::where('role', 3)->inRandomOrder()->limit(40)->get();
+        $marriage_profile_men = User::where('role', 3)->where('gender', "Female")->inRandomOrder()->limit(40)->get();
+        $marriage_profile_female = User::where('role', 3)->where('gender', "Male")->inRandomOrder()->limit(40)->get();
         $wedding_couch = Product::where('category_id', $couch_category)->inRandomOrder()->limit(40)->get();
-        return view('index', compact('wedding_products', 'blogs', 'last_blog', 'recommend_blog', 'marriage_profile', 'wedding_couch'));
+        return view('index', compact('wedding_products', 'blogs', 'last_blog', 'recommend_blog', 'marriage_profile', 'wedding_couch', 'marriage_profile_men', 'marriage_profile_female'));
     }
 
     function home(){
