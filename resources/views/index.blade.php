@@ -36,7 +36,7 @@
                             <h5 class="banner-bottom-text">@lang('home.find_life_partner')</h5>
                         </div>
                         <div class="banner-search">
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="col-lg-2 col-md-2 col-sm-5 col-xs-6">
                                     <div class="mid-text">
                                         @lang('home.iam')
@@ -66,14 +66,14 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="d-flex justify-content-left mt-4 mb-0">
                                 <div class="default-btn mr-2">
                                     <a href="{{ route('searchresult') }}">@lang('home.find_partner')</a>
                                 </div>
-                                <div class="default-btn ml-2">
+                                {{-- <div class="default-btn ml-2">
                                     <a href="{{ route('services') }}">@lang('home.view_more_services')</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -93,6 +93,63 @@
             </div>
             <div class="row pt-4 wedding-shop-slider">
                 @foreach ($marriage_profile as $profile)
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 slider-item">
+                        <div class="product-box">
+                            <div class="img-box" style="border-radius: 5px;">
+                                <a href="{{ route('profile', $profile->id) }}">
+                                    <img style="border-radius: 5px;" class="product-img" src="{{ asset('nsseb_assets/media/images/profile_img') }}/{{ $profile->profile_photo }}" alt="">
+                                </a>
+                            </div>
+                            <h5 style="font-size: 14px; line-height: 12px; margin-top: 10px;">{{ $profile->living_place ?? "Location" }}</h5>
+                            <a href="{{ route('profile', $profile->id) }}">
+                                <h6>{{ $profile->name }}</h6>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+                @empty($profile)
+                    <div class="text-danger">Nothig to show marriage profile...</div>
+                @endempty
+            </div>
+        </div>
+    </div>
+
+    <!-- Marriage Offers for male part Here -->
+    <div id="wedding" class="wedding main-wrapper pb-lg-3">
+        <div class="container">
+            <div class="wedding-header">
+                <h3 class="text-left">@lang('home.Marriage_offer_for_male')</h3>
+            </div>
+            <div class="row pt-4 wedding-shop-slider">
+                @forelse ($marriage_profile_men as $profile)
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 slider-item">
+                        <div class="product-box">
+                            <div class="img-box" style="border-radius: 5px;">
+                                <a href="{{ route('profile', $profile->id) }}">
+                                    <img style="border-radius: 5px;" class="product-img" src="{{ asset('nsseb_assets/media/images/profile_img') }}/{{ $profile->profile_photo }}" alt="">
+                                </a>
+                            </div>
+                            <h5 style="font-size: 14px; line-height: 12px; margin-top: 10px;">{{ $profile->living_place ?? "Location" }}</h5>
+                            <a href="{{ route('profile', $profile->id) }}">
+                                <h6>{{ $profile->name }}</h6>
+                            </a>
+                        </div>
+                    </div>
+                    @empty
+                    <div class="text-danger">Nothig to show marriage profile for Male ...</div>
+                @endforelse
+            </div>
+        </div>
+    </div>
+
+    <!-- Marriage Offers for Female part Here -->
+    <div id="wedding" class="wedding main-wrapper pb-lg-3">
+        <div class="container">
+            <div class="wedding-header">
+                <h3 class="text-left">@lang('home.Marriage_offer_for_female')</h3>
+            </div>
+            <div class="row pt-4 wedding-shop-slider">
+                @foreach ($marriage_profile_female as $profile)
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 slider-item">
                         <div class="product-box">
                             <div class="img-box" style="border-radius: 5px;">
@@ -223,63 +280,6 @@
                     @empty
                     <div class="text-danger">Nothig to show wedding Couch Product...</div>
                 @endforelse
-            </div>
-        </div>
-    </div>
-
-    <!-- Marriage Offers for male part Here -->
-    <div id="wedding" class="wedding main-wrapper pb-lg-3">
-        <div class="container">
-            <div class="wedding-header">
-                <h3 class="text-left">@lang('home.Marriage_offer_for_male')</h3>
-            </div>
-            <div class="row pt-4 wedding-shop-slider">
-                @forelse ($marriage_profile_men as $profile)
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 slider-item">
-                        <div class="product-box">
-                            <div class="img-box" style="border-radius: 5px;">
-                                <a href="{{ route('profile', $profile->id) }}">
-                                    <img style="border-radius: 5px;" class="product-img" src="{{ asset('nsseb_assets/media/images/profile_img') }}/{{ $profile->profile_photo }}" alt="">
-                                </a>
-                            </div>
-                            <h5 style="font-size: 14px; line-height: 12px; margin-top: 10px;">{{ $profile->living_place ?? "Location" }}</h5>
-                            <a href="{{ route('profile', $profile->id) }}">
-                                <h6>{{ $profile->name }}</h6>
-                            </a>
-                        </div>
-                    </div>
-                    @empty
-                    <div class="text-danger">Nothig to show marriage profile for Male ...</div>
-                @endforelse
-            </div>
-        </div>
-    </div>
-
-    <!-- Marriage Offers for Female part Here -->
-    <div id="wedding" class="wedding main-wrapper pb-lg-3">
-        <div class="container">
-            <div class="wedding-header">
-                <h3 class="text-left">@lang('home.Marriage_offer_for_female')</h3>
-            </div>
-            <div class="row pt-4 wedding-shop-slider">
-                @foreach ($marriage_profile_female as $profile)
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 slider-item">
-                        <div class="product-box">
-                            <div class="img-box" style="border-radius: 5px;">
-                                <a href="{{ route('profile', $profile->id) }}">
-                                    <img style="border-radius: 5px;" class="product-img" src="{{ asset('nsseb_assets/media/images/profile_img') }}/{{ $profile->profile_photo }}" alt="">
-                                </a>
-                            </div>
-                            <h5 style="font-size: 14px; line-height: 12px; margin-top: 10px;">{{ $profile->living_place ?? "Location" }}</h5>
-                            <a href="{{ route('profile', $profile->id) }}">
-                                <h6>{{ $profile->name }}</h6>
-                            </a>
-                        </div>
-                    </div>
-                @endforeach
-                @empty($profile)
-                    <div class="text-danger">Nothig to show marriage profile...</div>
-                @endempty
             </div>
         </div>
     </div>
