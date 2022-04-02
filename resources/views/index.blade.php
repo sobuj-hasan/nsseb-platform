@@ -86,7 +86,7 @@
     <!-- Header part End -->
 
     <!-- Marriage Offers part Here -->
-    <div id="wedding" class="wedding main-wrapper pb-lg-3">
+    {{-- <div id="wedding" class="wedding main-wrapper pb-lg-3">
         <div class="container">
             <div class="wedding-header">
                 <h3 class="text-left">@lang('home.marriage_offer')</h3>
@@ -112,7 +112,7 @@
                 @endempty
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- Marriage Offers for male part Here -->
     <div id="wedding" class="wedding main-wrapper pb-lg-3">

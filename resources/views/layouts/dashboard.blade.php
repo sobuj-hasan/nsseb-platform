@@ -34,7 +34,7 @@
                                         </li>
                                     @endif
                                     <li class="@yield('active_order')">
-                                        <a href="{{ route('myorder.create') }}"><i class="fas fa-user-alt"></i>&nbsp; My Orders</a>
+                                        <a href=""><i class="fas fa-user-alt"></i>&nbsp; My Orders</a>
                                     </li>
                                     <li class="@yield('active_wishlist')">
                                         <a href="{{ route('my.wishlist') }}"><i class="fas fa-user-alt"></i>&nbsp; My Wishlist</a>
