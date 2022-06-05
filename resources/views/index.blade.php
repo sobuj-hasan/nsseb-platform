@@ -31,49 +31,13 @@
                 <div class="container">
                     <div class="banner-div">
                         <div class="banner-text">
-                            {{-- <h1><strong class="bold-text">@lang('home.we_help_to')</strong></h1> --}}
-                            {{-- <h5 class="banner-top-text">@lang('home.nsseb_platform')</h5> --}}
                             <h5 class="banner-bottom-text">@lang('home.find_life_partner')</h5>
                         </div>
                         <div class="banner-search">
-                            {{-- <div class="row">
-                                <div class="col-lg-2 col-md-2 col-sm-5 col-xs-6">
-                                    <div class="mid-text">
-                                        @lang('home.iam')
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                                    <div class="input-group">
-                                        <select id="inputState" class="custom-input">
-                                            <option class="select-text" selected> @lang('home.man') </option>
-                                            <option class="select-text"> @lang('home.women') </option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-4 col-sm-7 col-xs-6">
-                                    <div class="mid-text-uniq">
-                                        @lang('home.looking_for')
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                                    <div class="input-group">
-                                        <select id="inputState" class="custom-input-uniq">
-                                            <option class="select-text" selected> @lang('home.women') </option>
-                                            <option class="select-text"> @lang('home.man') </option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div> --}}
                             <div class="d-flex justify-content-left mt-4 mb-0">
                                 <div class="default-btn mr-2">
                                     <a href="{{ route('searchresult') }}">@lang('home.find_partner')</a>
                                 </div>
-                                {{-- <div class="default-btn ml-2">
-                                    <a href="{{ route('services') }}">@lang('home.view_more_services')</a>
-                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -122,7 +86,7 @@
             </div>
             <div class="row pt-4 wedding-shop-slider">
                 @forelse ($marriage_profile_men as $profile)
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 slider-item">
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 slider-item">
                         <div class="product-box">
                             <div class="img-box" style="border-radius: 5px;">
                                 <a href="{{ route('profile', $profile->id) }}">
@@ -150,7 +114,7 @@
             </div>
             <div class="row pt-4 wedding-shop-slider">
                 @foreach ($marriage_profile_female as $profile)
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 slider-item">
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 slider-item">
                         <div class="product-box">
                             <div class="img-box" style="border-radius: 5px;">
                                 <a href="{{ route('profile', $profile->id) }}">

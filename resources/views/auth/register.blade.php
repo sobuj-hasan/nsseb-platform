@@ -45,8 +45,8 @@
                                 <div class="mt-1 login">
                                     <select class="form-control" aria-label="Default select example" name="gender" required>
                                         <option value="" selected>@lang('home.select_one')</option>
-                                        <option value="Male">@lang('home.male')</option>
-                                        <option value="Female">@lang('home.female')</option>
+                                        <option value="Male" {{old('gender') == 'Male' ? 'selected' : ""}}> @lang('home.male') </option>
+                                        <option value="Female" {{old('gender') == 'Female' ? 'selected' : ""}}> @lang('home.female') </option>
                                     </select>
                                 </div>
 
@@ -79,10 +79,10 @@
                                 <div class="mt-1 login">
                                     <select class="form-control" aria-label="Default select example" name="social_status" required>
                                         <option value="" selected>@lang('home.select_one')</option>
-                                        <option value="Single">@lang('home.single')</option>
-                                        <option value="Divorced">@lang('home.Divorced')</option>
-                                        <option value="Married">@lang('home.Married')</option>
-                                        <option value="Widower">@lang('home.Widower')</option>
+                                        <option value="Single" {{old('social_status') == 'Single' ? 'selected' : ""}}> @lang('home.single') </option>
+                                        <option value="Divorced" {{old('social_status') == 'Divorced' ? 'selected' : ""}}> @lang('home.Divorced') </option>
+                                        <option value="Married" {{old('social_status') == 'Married' ? 'selected' : ""}}> @lang('home.Married') </option>
+                                        <option value="Widower" {{old('social_status') == 'Widower' ? 'selected' : ""}}> @lang('home.Widower') </option>
                                     </select>
                                 </div>
 
@@ -123,16 +123,16 @@
 
                                 <h6 class="form-title mt-3">@lang('home.password')</h6>
                                 <div class="mt-1 login">
-                                    <input type="password" class="form-control" placeholder="@lang('home.type_your_address')" value="{{ old('password') }}" name="password" required>
+                                    <input type="password" id="passwordInput" class="form-control" placeholder="@lang('home.type_your_address')" value="{{ old('password') }}" name="password" required>
                                 </div>
 
                                 <h6 class="form-title mt-3">@lang('home.confirm_password')</h6>
                                 <div class="mt-1 login">
-                                    <input type="password" class="form-control" placeholder="@lang('home.re_type_password')" value="{{ old('password_confirmation') }}" name="password_confirmation">
+                                    <input type="password" id="confirmPasswordInput" class="form-control" placeholder="@lang('home.re_type_password')" value="{{ old('password_confirmation') }}" name="password_confirmation">
                                 </div>
 
                                 <div class="mb-4 mt-3 form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <input type="checkbox" onclick="passwordFunction()" class="form-check-input" id="exampleCheck1">
                                     <label class="form-check-label" for="exampleCheck1">@lang('home.show_password')</label>
                                 </div>
                                 <button class="w-100 mb-2" type="submit" class="btn btn-primary">@lang('home.submit')</button>
@@ -145,6 +145,25 @@
         </div>
     </div>
     <!-- Register PART END -->
+@endsection
+@section('footer_script')
+    <script>
+      function passwordFunction() {
+        var x = document.getElementById("passwordInput");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+
+        var y = document.getElementById("confirmPasswordInput");
+        if (y.type === "password") {
+          y.type = "text";
+        } else {
+          y.type = "password";
+        }
+      }
+    </script>
 @endsection
 
 
