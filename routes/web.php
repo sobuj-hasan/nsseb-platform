@@ -27,6 +27,8 @@ Route::get('/dashboard', function () {
 // Fontend Controller Routes
 Route::get('vendor/register', [RegisteredUserController::class, 'vendorRegister'])->name('vendor.register');
 Route::post('submit/vendor/register', [RegisteredUserController::class, 'vendorStore'])->name('vendor.store');
+Route::get('matchmaker/register', [RegisteredUserController::class, 'matchmakerRegister'])->name('matchmaker.register');
+Route::post('submit/matchmaker/register', [RegisteredUserController::class, 'matchmakerStore'])->name('matchmaker.store');
 Route::get('/', [FrontendController::class, 'index'])->name('index');
 Route::get('home', [FrontendController::class, 'home'])->name('home');
 Route::get('aboutus', [FrontendController::class, 'about'])->name('about.us');

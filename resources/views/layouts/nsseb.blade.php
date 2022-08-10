@@ -75,6 +75,7 @@
                                         <a class="dropdown-item" href="{{ route('login') }}">@lang('home.login')</a>
                                         <a class="dropdown-item" href="{{ route('register') }}">@lang('home.registeras_user')</a>
                                         <a class="dropdown-item" href="{{ route('vendor.register') }}">@lang('home.registeras_marchent')</a>
+                                        <a class="dropdown-item" href="{{ route('matchmaker.register') }}">@lang('home.Register_as_Matchmaker')</a>
                                     </div>
                                 </li>
                             @else
@@ -100,6 +101,9 @@
                                                 {{ __('Logout') }}
                                             </a>
                                         @endif
+                                        @if (Auth::user()->role == 4)
+                                            <a class="dropdown-item" href="{{ route('dashboard') }}">Matchmaker Account</a>
+                                        @endif 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                             @csrf
                                         </form>

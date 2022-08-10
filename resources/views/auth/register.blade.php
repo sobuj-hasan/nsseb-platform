@@ -60,6 +60,16 @@
                                     <input type="text" class="form-control" placeholder="@lang('home.nationality')" value="{{ old('nationality') }}" name="nationality" required>
                                 </div>
 
+                                <h6 class="form-title mt-3">@lang('home.color')</h6>
+                                <div class="mt-1 login">
+                                    <input type="text" class="form-control" placeholder="@lang('home.color')" value="{{ old('color') }}" name="color" required>
+                                </div>
+
+                                <h6 class="form-title mt-3">@lang('home.health_status')</h6>
+                                <div class="mt-1 login">
+                                    <input type="text" class="form-control" placeholder="@lang('home.health_status')" value="{{ old('health_status') }}" name="health_status" required>
+                                </div>
+
                                 <h6 class="form-title mt-3">@lang('home.educational_qualification')</h6>
                                 <div class="mt-1 login">
                                     <input type="text" class="form-control" placeholder="@lang('home.educational_qualification')" value="{{ old('education') }}" name="education" required>
@@ -119,6 +129,24 @@
                                 <h6 class="form-title mt-3">@lang('home.attributes_and_traits')</h6>
                                 <div class="mt-1 login">
                                     <input type="text" class="form-control" placeholder="@lang('home.attributes_and_traits')" value="{{ old('attributes_trait') }}" name="attributes_trait" required>
+                                </div>
+
+                                <h6 class="form-title mt-3">@lang('home.Do_you_accept_polygamy')</h6>
+                                <div class="mt-1 login">
+                                    <select class="form-control" aria-label="Default select example" name="accept_polygamy" required>
+                                        <option value="" selected>@lang('home.select_one')</option>
+                                        <option value="Yes" {{old('accept_polygamy') == 'Yes' ? 'selected' : ""}}> @lang('home.yes') </option>
+                                        <option value="No" {{old('accept_polygamy') == 'No' ? 'selected' : ""}}> @lang('home.no') </option>
+                                    </select>
+                                </div>
+
+                                <h6 class="form-title mt-3">@lang('home.Do_you_accept_foreigner')</h6>
+                                <div class="mt-1 login">
+                                    <select class="form-control" aria-label="Default select example" name="accept_foreigner" required>
+                                        <option value="" selected>@lang('home.select_one')</option>
+                                        <option value="Yes" {{old('accept_foreigner') == 'Yes' ? 'selected' : ""}}> @lang('home.yes') </option>
+                                        <option value="No" {{old('accept_foreigner') == 'No' ? 'selected' : ""}}> @lang('home.no') </option>
+                                    </select>
                                 </div>
 
                                 <h6 class="form-title mt-3">@lang('home.password')</h6>

@@ -18,6 +18,8 @@ return [
     "login" => "Sign In ",
     "signup" => "Registration",
     "we_help_to" => "We help you find the right partner...",
+    "Register_as_Matchmaker" => "Register as Matchmaker",
+    "welcome_to_our_matchmaker" => "Welcome to Our Matchmaker",
     // "nsseb_platform" => "Nasseb Platform",
     "find_life_partner" => "We provide you with more services that qualify you for a happy married life.",
     "iam" => "I am",
@@ -247,6 +249,13 @@ return [
     "Mobile_number" => "Mobile number",
     "address" => "address",
     "Activity_type" => "Activity type",
+    
+    "health_status" => "Health Status",
+    "Do_you_accept_polygamy" => "Do you accept polygamy ?",
+    "Do_you_accept_foreigner" => "Do you accept a foreigner ?",
+    "yes" => "Yes",
+    "no" => "No",
+    "Number_years_practicing_profession" => "Number of years practicing the profession",
     // ==============================
     // Contact Us Page content 
     // ==============================

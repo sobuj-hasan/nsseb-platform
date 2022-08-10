@@ -19,6 +19,8 @@ return [
     "login" => "تسجيل الدخول",
     "signup" => "يسجل",
     "we_help_to" => "نساعدك على إيجاد الشريك المناسب ... ",
+    "Register_as_Matchmaker" => "تسجيل الخطابة",
+    "welcome_to_our_matchmaker" => "مرحبا بكم في صانع الثقاب لدينا",
     // "nsseb_platform" => "منصة نصيب",
     "find_life_partner" => "ونوفر لك المزيد من الخدمات التي تؤهلك لحياة زوجية سعيدة.",
     "iam" => "أنا ",
@@ -247,6 +249,13 @@ return [
     "Mobile_number" => "رقم الجوال",
     "address" => "العنوان",
     "Activity_type" => "نوع النشاط",
+
+    "health_status" => "الحالة الصحية",
+    "Do_you_accept_polygamy" => "هل تقبل معدد",
+    "Do_you_accept_foreigner" => "هل تقبل اجنبي او اجنبية؟",
+    "yes" => "نعم",
+    "no" => "رقم",
+    "Number_years_practicing_profession" => "عدد سنوات مزاولة المهنة",
     // =========================
     // Contact page content 
     // ==========================

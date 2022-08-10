@@ -52,6 +52,10 @@ class RegisteredUserController extends Controller
             'salary' => ['required', 'string'],
             'living_place' => ['required', 'string'],
             'attributes_trait' => ['required', 'string'],
+            'color' => ['required', 'string'],
+            'health_status' => ['required', 'string'],
+            'accept_polygamy' => ['required', 'string'],
+            'accept_foreigner' => ['required', 'string'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
@@ -73,6 +77,10 @@ class RegisteredUserController extends Controller
             'salary' => $request->salary,
             'living_place' => $request->living_place,
             'attributes_trait' => $request->attributes_trait,
+            'color' => $request->color,
+            'health_status' => $request->health_status,
+            'accept_polygamy' => $request->accept_polygamy,
+            'accept_foreigner' => $request->accept_foreigner,
             'password' => Hash::make($request->password),
             'role' => 3,
         ]);
@@ -80,6 +88,41 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
         Notify::success('You Successfully registered!', 'Congrats Dear');
         
+        Auth::login($user);
+        return redirect(RouteServiceProvider::HOME);
+    }
+
+    // Matchmaker Register Here 
+
+    public function matchmakerRegister()
+    {
+        return view('auth.matchmaker-register');
+    }
+
+    public function matchmakerStore(Request $request)
+    {
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'phone' => ['required', 'string', 'max:255', 'unique:users'],
+            'email' => ['required', 'string','email', 'unique:users'],
+            'living_place' => ['required', 'string', 'max:255'],
+            'matchmaker_experience' => ['required', 'string', 'max:255'],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'phone' => $request->email,
+            'email' => $request->phone,
+            'living_place' => $request->living_place,
+            'matchmaker_experience' => $request->matchmaker_experience,
+            'password' => Hash::make($request->password),
+            'role' => 4,
+        ]);
+
+        event(new Registered($user));
+        Notify::success('You Successfully registered!', 'Welcome matchmaker');
+
         Auth::login($user);
         return redirect(RouteServiceProvider::HOME);
     }

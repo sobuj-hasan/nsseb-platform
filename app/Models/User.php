@@ -37,7 +37,12 @@ class User extends Authenticatable
         'workplace',
         'salary',
         'living_place',
+        'matchmaker_experience',
         'attributes_trait',
+        'color',
+        'health_status',
+        'accept_polygamy',
+        'accept_foreigner',
         'role',
         'password',
     ];
